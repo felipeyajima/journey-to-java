@@ -8,6 +8,7 @@ public class TestaValores {
 		Conta conta2 = new Conta(1337, 2424);
 		Conta conta3 = new Conta(13337, 24234);
 		
+		//consultando o atributo da classe
 		System.out.println(Conta.getTotal());
 		
 		

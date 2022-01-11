@@ -3,9 +3,10 @@ public class Conta {
 	private double saldo;
 	private int agencia;
 	private int numero;
+	// relacionamento entre classes - Composição
 	private Cliente titular;
 	// atributo da classe | atributo compartilhado
-	private static int total;
+	private static int total = 0;
 	
 	// vc quer criar uma conta? vc precisa passar isso isso e isso
 	// Construtor padrão - quando vc nao escreve, ele cria invisivelmente e executa sempre que constroi uma conta
@@ -16,6 +17,7 @@ public class Conta {
 		
 		this.agencia = agencia;
 		this.numero = numero;
+		this.saldo = 100;
 		System.out.println("estou criando uma conta" + this.numero);
 	}
 	
@@ -81,6 +83,7 @@ public class Conta {
 		return titular;
 	}
 	
+	// Metodo da classe statico = devolve o total das contas criadas
 	public static int getTotal() {
 		return Conta.total;
 	}
