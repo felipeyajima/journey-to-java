@@ -1,13 +1,12 @@
-
-public class Funcionario {
+// nao pode instanciar dessa classe pq é abstrata
+public abstract class Funcionario {
 	private String nome;
 	private String cpf;
 	protected double salario;
 	
-	public double getBonificacao() {
-		
-		return this.salario * 0.05;
-	}
+	// garante que o metodo existe mas sem implementacao 
+	// metodo abstract sem corpo, nao implementado
+	public abstract double getBonificacao();
 	
 	public String getNome() {
 		return nome;
