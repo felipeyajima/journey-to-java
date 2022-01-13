@@ -1,19 +1,16 @@
+// quando vc usa uma interface, vc nao usa extends e sim implements
+public class Cliente implements Autenticavel {
 
-public class Gerente extends Funcionario implements Autenticavel {
 	
 	private AutenticacaoUtil autenticador;
-
-	public Gerente() {
+	
+	
+	public Cliente() {
 		// Composicao - quando cria o objeto gerente, automaticamente cria o objeto autinticacaoutil, onde vc colocou toda
 		// a logica de autenticacao
 		this.autenticador = new AutenticacaoUtil();
 	}
 	
-	public double getBonificacao() {
-		System.out.println("chamando o metodo de bonificacao do Gerente");
-		return super.getSalario();
-	}
-
 	@Override
 	public void setSenha(int senha) {
 		this.autenticador.setSenha(senha);
