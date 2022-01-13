@@ -1,19 +1,20 @@
 
-public class Gerente extends Funcionario implements Autenticavel {
+public class Administrador extends Funcionario implements Autenticavel {
 	
 	private AutenticacaoUtil autenticador;
 
-	public Gerente() {
+	public Administrador() {
 		// Composicao - quando cria o objeto gerente, automaticamente cria o objeto autinticacaoutil, onde vc colocou toda
 		// a logica de autenticacao
 		this.autenticador = new AutenticacaoUtil();
 	}
 	
+	@Override
 	public double getBonificacao() {
-		System.out.println("chamando o metodo de bonificacao do Gerente");
-		return super.getSalario();
+		return 50;
 	}
 
+	
 	@Override
 	public void setSenha(int senha) {
 		this.autenticador.setSenha(senha);
@@ -25,5 +26,4 @@ public class Gerente extends Funcionario implements Autenticavel {
 		boolean autenticou = this.autenticador.autentica(senha);
 		return autenticou;
 	}
-	
 }
