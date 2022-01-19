@@ -11,5 +11,5 @@
 | Java OO: Introdução à Orientação a Objetos  | 07/01 | OO, Classes, Metodos, Construtores, Atributos, Getter e Setters | bytebank-composto  |
 | Java OO: Introdução à Orientação a Objetos  | 07/01 | OO, Classes, Metodos, Construtores, Atributos, Getter e Setters | bytebank-encapsulado  |
 | Java Polimorfismo: Entenda a herança e interfaces | 13/01 | Polimorfismo, Super, Private, Extends, Classes Intermediarias, Interfaces e Composicao  | bytebank-herdado |
-| Java Polimorfismo: Entenda a herança e interfaces | 13/01 | Classe abstrata e metodos abstratos | bytebank-herdado-conta |
-|  Java Excessões | | depurar, step over e step into no Eclipse, Try catch, new Exception(),  throw ex;  Criando a propria excecao, checked e unchecked | java-pilha
+| Java Polimorfismo: Entenda a herança e interfaces | 13/01 | Classe abstrata e metodos abstratos, try catch, finnaly, novo try | bytebank-herdado-conta |
+|  Java Excessões | | depurar, step over e step into no Eclipse, Try catch, new Exception(),  throw ex;  Criando a propria excecao, checked e unchecked, finnaly, novo try | java-pilha
