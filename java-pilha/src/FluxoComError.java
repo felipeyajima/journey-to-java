@@ -1,5 +1,5 @@
 
-public class Fluxo {
+public class FluxoComError {
 
     public static void main(String[] args) {
         System.out.println("Ini do main");
@@ -24,17 +24,9 @@ public class Fluxo {
     }
 
     private static void metodo2() {
-        System.out.println("Ini do metodo2");
-        
-        
-        //throing a exception
-        //ArithmeticException ex = new ArithmeticException("deu errado");
-        //throw ex;
-        
-        // ou
-        
-        throw new MinhaExcecao("deu erradissimo");
-        
-        //System.out.println("Fim do metodo2");
+        System.out.println("iniciando  metodo2");
+        //gerando Error para a maquina virtual
+        metodo2();
+        System.out.println("fim  metodo2");
     }
 }
