@@ -14,7 +14,7 @@ public class TesteReferencias {
 		f.setSalario(2000.0);
 		
 		EditorVideo ev = new EditorVideo();
-		f.setSalario(2500.0);
+		ev.setSalario(2500.0);
 		
 		
 		ControleBonificacao controle = new ControleBonificacao();
@@ -23,7 +23,7 @@ public class TesteReferencias {
 		controle.registra(ev);
 		
 		
-		//System.out.println(controle.getSoma());
+		System.out.println(controle.getSoma());
 
 	}
 
