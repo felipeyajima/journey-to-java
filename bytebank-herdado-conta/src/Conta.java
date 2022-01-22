@@ -26,8 +26,10 @@ public abstract class Conta {
 	}
 	
 	
-	public abstract void deposita(double valor); // é comum as excessoes serem lancadas no inicio, desta forma o if inverte para testar o falso primeiro
+	public abstract void deposita(double valor); 
 	
+	
+	// é comum as excessoes serem lancadas no inicio, desta forma o if inverte para testar o falso primeiro
 	public void saca(double valor) throws SaldoInsuficienteException {
 		if(this.saldo < valor) {
 			throw new SaldoInsuficienteException("Saldo: " + this.saldo + ", Valor sacar: " + valor);

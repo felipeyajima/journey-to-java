@@ -8,9 +8,6 @@ public class Fluxo {
         } catch(Exception ex) {
         	String msg = ex.getMessage();
         	System.out.println("Exception " + msg);
-        	
-        	System.out.println();
-        	System.out.println();
         	ex.printStackTrace();   	
         }
         
