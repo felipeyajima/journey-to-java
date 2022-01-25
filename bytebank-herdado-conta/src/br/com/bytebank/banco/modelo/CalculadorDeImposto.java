@@ -1,3 +1,4 @@
+package br.com.bytebank.banco.modelo;
 
 public class CalculadorDeImposto {
 	
@@ -5,11 +6,11 @@ public class CalculadorDeImposto {
 	
 	public void registra(Tributavel t) {
 		double valor = t.getValorImposto();
-		this.totalImposto += valor;	
+		this.totalImposto += valor;
 	}
 	
 	public double getTotalImposto() {
 		return totalImposto;
 	}
-	
+
 }
