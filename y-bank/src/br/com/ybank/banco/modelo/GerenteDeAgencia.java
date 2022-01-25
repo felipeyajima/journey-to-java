@@ -1,3 +1,4 @@
+package br.com.ybank.banco.modelo;
 
 public class GerenteDeAgencia extends Funcionario implements AgenciaDeAtuacao {
 	

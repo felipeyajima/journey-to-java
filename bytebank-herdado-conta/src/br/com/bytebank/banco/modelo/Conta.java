@@ -1,4 +1,4 @@
-
+package br.com.bytebank.banco.modelo;
 // abstract ngn consegue instanciar essa classe.. apenas corrente e poupanca
 public abstract class Conta {
 	// atributo da instancia

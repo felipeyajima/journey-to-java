@@ -1,3 +1,4 @@
+package br.com.ybank.banco.modelo;
 
 public abstract class Pessoa {
 	
@@ -20,8 +21,8 @@ public abstract class Pessoa {
 		return this.cpf;
 	}
 	
-
-	public void setCpf(String cpf) {
+	// Usando excecao Checked - obrigatorio usar o try catch ou o trows no metodo, do arquivo onde está o Main
+	public void setCpf(String cpf) throws CpfInvalidoException{
 		if (cpf.length() != 11) {
 			throw new CpfInvalidoException("cpf invalido");
 		} else {
@@ -34,8 +35,14 @@ public abstract class Pessoa {
 		return this.dataNascimento;
 	}
 	
+	
+	// Usando excecao Unchecked
 	public void setDataNascimento(String dataNascimento) {
-		this.dataNascimento = dataNascimento;
+		if(dataNascimento.length() != 10) {
+			throw new DataNascimentoException("Data nascimento invalida");
+		} else {
+			this.dataNascimento = dataNascimento;
+		}
 	}
 	
 	public String getNomePai() {

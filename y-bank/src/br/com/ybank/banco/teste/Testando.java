@@ -1,3 +1,9 @@
+package br.com.ybank.banco.teste;
+import br.com.ybank.banco.modelo.Advogado;
+import br.com.ybank.banco.modelo.Agencia;
+import br.com.ybank.banco.modelo.Cliente;
+import br.com.ybank.banco.modelo.CpfInvalidoException;
+import br.com.ybank.banco.modelo.GerenteDeAgencia;
 
 public class Testando {
 
@@ -5,7 +11,14 @@ public class Testando {
 		
 		Advogado advogado = new Advogado();
 		advogado.setNome("Felipe Yajima Batista");
+		// Validando com o try catch a exception unchecked
+		try {
 		advogado.setCpf("39990055807");
+		} catch(CpfInvalidoException ex)  {
+			System.out.println("EXCEPTION !!: " + ex.getMessage());
+			ex.printStackTrace();	
+		}
+		
 		advogado.setDataNascimento("20/11/1990");
 		advogado.setNomeMae("Marta Toshico Yajima Batista");
 		advogado.setNomePai("Joao da Rocha Batista");
@@ -15,13 +28,18 @@ public class Testando {
 		System.out.println(advogado.getSalario());
 		System.out.println(advogado.getNome());
 		
+		
+		
+		
 		Cliente cliente = new Cliente();
 		cliente.setNome("Juliano Ferraz");
-		
+		// Validando com o try catch a exception unchecked
+
 		try {
-			cliente.setCpf("33322233222");
+			cliente.setCpf("33332222222");
 		} catch(CpfInvalidoException ex) {
 			System.out.println("EXCEPTION !!: " + ex.getMessage());
+			ex.printStackTrace();	
 		}
 		
 		cliente.setDataNascimento("31/01/2000");
@@ -31,6 +49,8 @@ public class Testando {
 		
 		System.out.println(cliente.getNome());
 		System.out.println(cliente.getNumeroCliente());	
+		
+		
 		
 		
 		Agencia agencia = new Agencia();
@@ -44,8 +64,15 @@ public class Testando {
 		
 		GerenteDeAgencia gerenteDeAgencia = new GerenteDeAgencia();
 		gerenteDeAgencia.setNome("Patrick Yajima Batista");
+		
+		try {
 		gerenteDeAgencia.setCpf("39990056889");
-		gerenteDeAgencia.setDataNascimento("20/11/1991");
+		} catch(CpfInvalidoException ex) {
+			System.out.println("EXCEPTION !!: " + ex.getMessage());
+			ex.printStackTrace();	
+		}
+		
+		gerenteDeAgencia.setDataNascimento("20/11/1901");
 		gerenteDeAgencia.setNomeMae("Marta Toshico Yajima Batista");
 		gerenteDeAgencia.setNomePai("Joao da Rocha Batista");
 		gerenteDeAgencia.setSalario(3000.0);
