@@ -10,18 +10,18 @@ public class Testando {
 	public static void main(String[] args) {
 		
 		Advogado advogado = new Advogado();
-		advogado.setNome("Felipe Yajima Batista");
+		advogado.setNome("Felipe Silva");
 		// Validando com o try catch a exception unchecked
 		try {
-		advogado.setCpf("39990055807");
+		advogado.setCpf("00011133344");
 		} catch(CpfInvalidoException ex)  {
 			System.out.println("EXCEPTION !!: " + ex.getMessage());
 			ex.printStackTrace();	
 		}
 		
 		advogado.setDataNascimento("20/11/1990");
-		advogado.setNomeMae("Marta Toshico Yajima Batista");
-		advogado.setNomePai("Joao da Rocha Batista");
+		advogado.setNomeMae("Julia Silva");
+		advogado.setNomePai("Jonas Souza");
 		advogado.setSalario(2000.0);
 		advogado.setMatricula(123);
 		
@@ -63,18 +63,18 @@ public class Testando {
 		
 		
 		GerenteDeAgencia gerenteDeAgencia = new GerenteDeAgencia();
-		gerenteDeAgencia.setNome("Patrick Yajima Batista");
+		gerenteDeAgencia.setNome("Rodrigo Gomes");
 		
 		try {
-		gerenteDeAgencia.setCpf("39990056889");
+		gerenteDeAgencia.setCpf("11122233355");
 		} catch(CpfInvalidoException ex) {
 			System.out.println("EXCEPTION !!: " + ex.getMessage());
 			ex.printStackTrace();	
 		}
 		
 		gerenteDeAgencia.setDataNascimento("20/11/1901");
-		gerenteDeAgencia.setNomeMae("Marta Toshico Yajima Batista");
-		gerenteDeAgencia.setNomePai("Joao da Rocha Batista");
+		gerenteDeAgencia.setNomeMae("Rosana Oliveira");
+		gerenteDeAgencia.setNomePai("Juca da Silva");
 		gerenteDeAgencia.setSalario(3000.0);
 		gerenteDeAgencia.setMatricula(1233);
 		
